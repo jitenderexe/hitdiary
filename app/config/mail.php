@@ -28,7 +28,7 @@ return array(
 	|
 	*/
 
-	'host' => 'smtp.gmail.com',
+	'host' => $_SERVER['MAIL_HOST'],
 
 	/*
 	|--------------------------------------------------------------------------
@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => 'smartsbee14@gmail.com', 'name' => 'smartsbee'),
+	'from' => array('address' => $_SERVER['MAIL_USERNAME'], 'name' => 'Hitdiary'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	'username' => 'smartsbee14@gmail.com',
+	'username' => $_SERVER['MAIL_USERNAME'],
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return array(
 	|
 	*/
 
-	'password' => 'abc@1234567',
+	'password' => $_SERVER['MAIL_PASSWORD'],
 
 	/*
 	|--------------------------------------------------------------------------

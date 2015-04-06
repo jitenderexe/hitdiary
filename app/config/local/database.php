@@ -22,10 +22,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'localhost',
-			'database'  => 'homestead',
-			'username'  => 'homestead',
-			'password'  => 'secret',
+			'host'      => $_SERVER['DB_HOST'],
+			'database'  => $_SERVER['DB_NAME'],
+			'username'  => $_SERVER['DB_USERNAME'],
+			'password'  => $_SERVER['DB_PASSWORD'],
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

@@ -1,5 +1,12 @@
 <?php
 
+Route::get('test', function(){
+	
+	
+	echo $_SERVER['DB_NAME'];
+	
+	});
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
