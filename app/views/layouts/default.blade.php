@@ -5,8 +5,17 @@
 <title>Hit Diary</title>
 <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
 <link rel="stylesheet" type="text/css" href="/assets/css/custom.css" />
+<!--rtnotify.css-->
+<link href="/assets/css/jquery.rtnotify.css" rel="stylesheet" type="text/css">
+
 <script src="/assets/js/jquery-1.7.2.js"></script>
 <script src="/assets/js/custom.js"></script>
+
+<!--rtnotify.js-->
+<script src="/assets/js/jquery.rtnotify.js" type="text/javascript"></script>
+
+
+ 
 </head>
 
 <body>
@@ -15,5 +24,6 @@
 		@yield('content')
 		
 	</div>
+	@include('includes.notifications')
 </body>
 </html>

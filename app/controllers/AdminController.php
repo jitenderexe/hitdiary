@@ -17,7 +17,13 @@ class AdminController extends BaseController {
     		);
 			$validator = Validator::make(Input::all(), $rules);
 	    		if($validator->fails()){
-					return Redirect::back()->withErrors($validator)->withInput();
+					//return Redirect::back()->withErrors($validator)->withInput();
+					$notification[]=array('message'=>'Invalid Email or Password',
+										  'type'=>'error',
+						                  'timeout'=>'10'
+										);
+						Session::flash('notification', $notification);
+						return Redirect::back();
 				}
 			else{
 				$userdata = array(
@@ -26,7 +32,12 @@ class AdminController extends BaseController {
             	
 				if(Auth::attempt($userdata))
 				{
-					return Redirect::to('/index');
+					$notification[]=array('message'=>'Welcome To HitDiary',
+										  'type'=>'success',
+						                  'timeout'=>'10'
+										);
+						Session::flash('notification', $notification);
+					    return Redirect::to('/index');
 				}else{
 					 return Redirect::to('/');
 					}
@@ -250,7 +261,13 @@ class AdminController extends BaseController {
 		$invite->invite_email = $user_email;
 		$invite->token        = $token;
 		$invite->save();
-		return Redirect::to('/index');
+		
+		$notification[]=array('message'=>'Email Send Successfully',
+										  'type'=>'success',
+						                  'timeout'=>'20'
+										);
+						Session::flash('notification', $notification);
+						return Redirect::to('/index');
 				
 	}
 	

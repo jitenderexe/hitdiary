@@ -5,6 +5,7 @@
         </div>
         <form role="form" action="/login" method="post">
 			<div class="main">
+				
 				<div class="l-diary"><p>Hitdiary Login</p>
         		<!--<div class="l-table">-->
                     	<table class="loginform">
